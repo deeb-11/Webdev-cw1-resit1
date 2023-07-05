@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Now Eat Soon !</title>
+    <style>
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 4px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+input[type="submit"] {
+    background-color: #FF5A5F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF3338;
+}
+
+/* Custom Select Drop-down */
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom-select {
+    display: none;
+}
+
+.custom-select-trigger {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-select-trigger::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #888;
+    transition: transform 0.3s ease;
+}
+
+.custom-select-wrapper.open .custom-select-trigger::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.custom-options {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-option {
+    position: relative;
+    display: block;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-option:hover,
+.custom-option.selected {
+    background-color: #f2f2f2;
+}
+
+
+
+
+        /* Add CSS styles for form styling */
+    </style>
+</head>
+<body>
+    <h1>Online Ordering</h1>
+
+    <form action="submit_order.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="pizza-size">Pizza Size:</label>
+        <select id="pizza-size" name="pizza-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        <label for="toppings">Toppings:</label>
+        <input type="checkbox" id="toppings-cheese" name="toppings" value="cheese">
+        <label for="toppings-cheese">Cheese</label>
+        <input type="checkbox" id="toppings-pepperoni" name="toppings" value="pepperoni">
+        <label for="toppings-pepperoni">Pepperoni</label>
+        <!-- Add more toppings checkboxes as needed -->
+
+        <label for="delivery-date">Delivery Date:</label>
+        <input type="date" id="delivery-date" name="delivery-date" required>
+
+        <label for="delivery-time">Delivery Time:</label>
+        <input type="time" id="delivery-time" name="delivery-time" required>
+
+        <input type="submit" value="Place Order">
+    </form>
+</body>
+<a href="index.html">Go back </a>
+
+</html>
+
+<a href="index.html">Go back </a>
